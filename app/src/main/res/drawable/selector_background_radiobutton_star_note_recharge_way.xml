@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@mipmap/ic_not_selected" android:state_checked="false" />
+
+    <item android:drawable="@mipmap/ic_selected_bgred_drawwhite" android:state_checked="true" />
+
+</selector>

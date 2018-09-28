@@ -1,0 +1,656 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffededed">
+
+    <RelativeLayout
+        android:id="@+id/rl_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@android:color/white"
+        android:minHeight="48dp">
+
+        <LinearLayout
+            android:id="@+id/ll_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:minWidth="48dp"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/iv_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/ic_back"
+                tools:ignore="contentDescription"
+                android:layout_marginStart="15dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:text="星币充值"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            tools:ignore="HardcodedText" />
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="充值数量"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:text="1星币=1元"
+                    android:textColor="#ff969696"
+                    android:textSize="13sp"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+            </LinearLayout>
+
+            <com.wkz.radiogroup.RadioGroup
+                android:id="@+id/rg_star_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <android.support.v4.widget.Space
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_background_star_note_recharge">
+
+                        <RadioButton
+                            android:id="@+id/rb_star_note_100"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/selector_background_radiobutton_star_note_count"
+                            android:button="@null"
+                            android:checked="true"
+                            tools:ignore="RtlHardcoded" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="25dp"
+                            android:text="100星币"
+                            android:textColor="@color/selector_normalblack_selectedwhite"
+                            android:textSize="13sp"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="45dp"
+                            android:text="￥100"
+                            android:textColor="@color/selector_normalblack_selectedwhite"
+                            android:textSize="12sp"
+                            tools:ignore="HardcodedText" />
+                    </RelativeLayout>
+
+                    <android.support.v4.widget.Space
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_background_star_note_recharge">
+
+                        <RadioButton
+                            android:id="@+id/rb_star_note_500"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/selector_background_radiobutton_star_note_count"
+                            android:button="@null"
+                            tools:ignore="RtlHardcoded" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="25dp"
+                            android:text="500星币"
+                            android:textColor="@color/selector_normalblack_selectedwhite"
+                            android:textSize="13sp"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="45dp"
+                            android:text="￥500"
+                            android:textColor="@color/selector_normalblack_selectedwhite"
+                            android:textSize="12sp"
+                            tools:ignore="HardcodedText" />
+                    </RelativeLayout>
+
+                    <android.support.v4.widget.Space
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_background_star_note_recharge">
+
+                        <RadioButton
+                            android:id="@+id/rb_star_note_1000"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/selector_background_radiobutton_star_note_count"
+                            android:button="@null"
+                            tools:ignore="RtlHardcoded" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="25dp"
+                            android:text="1000星币"
+                            android:textColor="@color/selector_normalblack_selectedwhite"
+                            android:textSize="13sp"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="45dp"
+                            android:text="￥1000"
+                            android:textColor="@color/selector_normalblack_selectedwhite"
+                            android:textSize="12sp"
+                            tools:ignore="HardcodedText" />
+                    </RelativeLayout>
+
+                    <android.support.v4.widget.Space
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+
+                    <android.support.v4.widget.Space
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_background_star_note_recharge">
+
+                        <RadioButton
+                            android:id="@+id/rb_star_note_5000"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/selector_background_radiobutton_star_note_count"
+                            android:button="@null"
+                            tools:ignore="RtlHardcoded" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="25dp"
+                            android:text="5000星币"
+                            android:textColor="@color/selector_normalblack_selectedwhite"
+                            android:textSize="13sp"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="45dp"
+                            android:text="￥5000"
+                            android:textColor="@color/selector_normalblack_selectedwhite"
+                            android:textSize="12sp"
+                            tools:ignore="HardcodedText" />
+                    </RelativeLayout>
+
+                    <android.support.v4.widget.Space
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_background_star_note_recharge">
+
+                        <RadioButton
+                            android:id="@+id/rb_star_note_10000"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/selector_background_radiobutton_star_note_count"
+                            android:button="@null"
+                            tools:ignore="RtlHardcoded" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="25dp"
+                            android:text="10000星币"
+                            android:textColor="@color/selector_normalblack_selectedwhite"
+                            android:textSize="13sp"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="45dp"
+                            android:text="￥10000"
+                            android:textColor="@color/selector_normalblack_selectedwhite"
+                            android:textSize="12sp"
+                            tools:ignore="HardcodedText" />
+                    </RelativeLayout>
+
+                    <android.support.v4.widget.Space
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_background_star_note_recharge">
+
+                        <RadioButton
+                            android:id="@+id/rb_star_note_at_will"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/selector_background_radiobutton_star_note_count"
+                            android:button="@null"
+                            tools:ignore="RtlHardcoded" />
+
+                        <TextView
+                            android:id="@+id/tv_star_note_at_will"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="其他金额"
+                            android:textColor="#ff505050"
+                            android:textSize="13sp"
+                            tools:ignore="HardcodedText" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_star_note_at_will"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:layout_margin="5dp"
+                            android:gravity="center_vertical|end"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <EditText
+                                android:id="@+id/et_star_note_at_will"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:gravity="end|center_vertical"
+                                android:inputType="numberDecimal"
+                                android:maxLength="32"
+                                android:textColor="@android:color/white"
+                                android:textCursorDrawable="@drawable/shape_cursor_white"
+                                android:textSize="12sp"
+                                tools:ignore="HardcodedText" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="星币"
+                                android:textColor="@android:color/white"
+                                android:textSize="13sp"
+                                tools:ignore="HardcodedText" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <android.support.v4.widget.Space
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </com.wkz.radiogroup.RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:text="支付方式"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+
+            <com.wkz.radiogroup.RadioGroup
+                android:id="@+id/rg_recharge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <RelativeLayout
+                    android:id="@+id/rl_recharge_alipay"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/shape_background_white_cornersfive">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:src="@mipmap/ic_recharge_alipay"
+                        tools:ignore="ContentDescription,RtlHardcoded" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="53dp"
+                        android:text="支付宝支付"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText,RtlHardcoded" />
+
+                    <RadioButton
+                        android:id="@+id/rb_recharge_alipay"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/selector_background_radiobutton_star_note_recharge_way"
+                        android:button="@null"
+                        android:checked="true"
+                        tools:ignore="RtlHardcoded" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_recharge_wechat"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/shape_background_white_cornersfive">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:src="@mipmap/ic_recharge_wechat"
+                        tools:ignore="ContentDescription,RtlHardcoded" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="53dp"
+                        android:text="微信支付"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText,RtlHardcoded" />
+
+                    <RadioButton
+                        android:id="@+id/rb_recharge_wechat"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/selector_background_radiobutton_star_note_recharge_way"
+                        android:button="@null"
+                        tools:ignore="RtlHardcoded" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_recharge_union"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/shape_background_white_cornersfive"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:src="@mipmap/ic_recharge_union"
+                        tools:ignore="ContentDescription,RtlHardcoded" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="53dp"
+                        android:text="银联支付"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText,RtlHardcoded" />
+
+                    <RadioButton
+                        android:id="@+id/rb_recharge_union"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/selector_background_radiobutton_star_note_recharge_way"
+                        android:button="@null"
+                        tools:ignore="RtlHardcoded" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_recharge_qq"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/shape_background_white_cornersfive"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:src="@mipmap/ic_recharge_qq"
+                        tools:ignore="ContentDescription,RtlHardcoded" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="53dp"
+                        android:text="QQ支付"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText,RtlHardcoded" />
+
+                    <RadioButton
+                        android:id="@+id/rb_recharge_qq"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/selector_background_radiobutton_star_note_recharge_way"
+                        android:button="@null"
+                        tools:ignore="RtlHardcoded" />
+                </RelativeLayout>
+            </com.wkz.radiogroup.RadioGroup>
+
+            <RelativeLayout
+                android:id="@+id/rl_recharge_more"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="-5dp"
+                android:background="@drawable/shape_background_white_cornersfive">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:src="@mipmap/ic_arrow_down"
+                    tools:ignore="ContentDescription,RtlHardcoded" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="53dp"
+                    android:text="更多支付方式"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_discount"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="58dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/shape_background_white_cornersfive">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:src="@mipmap/ic_discount"
+                    tools:ignore="ContentDescription,RtlHardcoded" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="53dp"
+                    android:text="折扣券"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+
+                <ImageView
+                    android:id="@+id/iv_arrow_discount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/ic_arrow_right"
+                    tools:ignore="ContentDescription,RtlHardcoded" />
+
+                <TextView
+                    android:id="@+id/tv_usable_discount"
+                    android:layout_width="50dp"
+                    android:layout_height="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="25dp"
+                    android:layout_toLeftOf="@id/iv_arrow_discount"
+                    android:background="@drawable/shape_background_red_cornersthree"
+                    android:gravity="center"
+                    android:text="1个可用"
+                    android:textColor="@android:color/white"
+                    android:textSize="9sp"
+                    tools:ignore="HardcodedText,RtlHardcoded,SmallSp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/tv_recharge_immediately"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="bottom"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:text="立即支付100元"
+        android:textColor="#fffe5848"
+        android:textSize="15sp"
+        tools:ignore="HardcodedText" />
+</FrameLayout>
