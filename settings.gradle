@@ -1,1 +1,2 @@
+include ':nested-radio-group'
 include ':app'

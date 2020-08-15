@@ -1,8 +1,8 @@
-package com.wkz.radiogroup;
+package com.fphoenixcorneae.demo;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.AppCompatImageView;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatImageView;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -14,9 +14,11 @@ import android.widget.RadioButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.fphoenixcorneae.radiogroup.NestedRadioGroup;
+
 import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener, RadioGroup.OnCheckedChangeListener, TextWatcher {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener, NestedRadioGroup.OnCheckedChangeListener, TextWatcher {
 
     private AppCompatImageView mIvLeft;
     private LinearLayout mLlLeft;
@@ -37,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView mTvStarNoteAtWill;
     private EditText mEtStarNoteAtWill;
     private LinearLayout mLlStarNoteAtWill;
-    private RadioGroup mRgStarNote;
+    private NestedRadioGroup mRgStarNote;
     private RadioButton mRbRechargeAlipay;
     private RelativeLayout mRlRechargeAlipay;
     private RadioButton mRbRechargeWechat;
@@ -46,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private RelativeLayout mRlRechargeUnion;
     private RadioButton mRbRechargeQq;
     private RelativeLayout mRlRechargeQq;
-    private RadioGroup mRgRecharge;
+    private NestedRadioGroup mRgRecharge;
     private RelativeLayout mRlRechargeMore;
     private ImageView mIvArrowDiscount;
     /**
@@ -119,8 +121,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    public void onCheckedChanged(RadioGroup group, int checkedId) {
-        if (group == mRgStarNote) {//充值数量
+    public void onCheckedChanged(NestedRadioGroup group, int checkedId) {
+        if (group == mRgStarNote) {
+            //充值数量
             if (checkedId == mRbStarNoteAtWill.getId()) {
                 mTvStarNoteAtWill.setVisibility(View.GONE);
                 mLlStarNoteAtWill.setVisibility(View.VISIBLE);
@@ -146,7 +149,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     mTvRechargeImmediately.setText(String.format(Locale.getDefault(), "立即支付%d元", 10000));
                 }
             }
-        } else if (group == mRgRecharge) {//支付方式
+        } else if (group == mRgRecharge) {
+            //支付方式
 
         }
     }
@@ -158,7 +162,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onTextChanged(CharSequence s, int start, int before, int count) {
-        if (View.GONE == mEtStarNoteAtWill.getVisibility()) return;
+        if (View.GONE == mEtStarNoteAtWill.getVisibility()) {
+            return;
+        }
         if (TextUtils.isEmpty(s)) {
             mTvRechargeImmediately.setText(String.format(Locale.getDefault(), "立即支付%d元", 0));
         } else {

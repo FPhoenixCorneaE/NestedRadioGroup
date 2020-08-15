@@ -10,3 +10,10 @@
 /captures
 .externalNativeBuild
 /.idea
+/nested-radio-group/src/test
+/nested-radio-group/src/androidTest
+/app/src/test
+/app/src/androidTest
+/gradlew.bat
+/gradle
+/gradlew

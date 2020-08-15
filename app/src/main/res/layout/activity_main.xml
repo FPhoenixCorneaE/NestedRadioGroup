@@ -20,15 +20,15 @@
             android:minWidth="48dp"
             android:orientation="horizontal">
 
-            <android.support.v7.widget.AppCompatImageView
+            <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/iv_left"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
                 android:layout_marginLeft="15dp"
                 android:scaleType="centerInside"
                 android:src="@mipmap/ic_back"
-                tools:ignore="contentDescription"
-                android:layout_marginStart="15dp" />
+                tools:ignore="contentDescription" />
         </LinearLayout>
 
         <TextView
@@ -42,15 +42,15 @@
             android:gravity="center"
             android:marqueeRepeatLimit="marquee_forever"
             android:scrollHorizontally="true"
-            android:text="星币充值"
             android:singleLine="true"
+            android:text="星币充值"
             android:textColor="@android:color/black"
             android:textSize="15sp"
             android:textStyle="normal"
             tools:ignore="HardcodedText" />
     </RelativeLayout>
 
-    <android.support.v4.widget.NestedScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
@@ -86,7 +86,7 @@
                     tools:ignore="HardcodedText,RtlHardcoded" />
             </LinearLayout>
 
-            <com.wkz.radiogroup.RadioGroup
+            <com.fphoenixcorneae.radiogroup.NestedRadioGroup
                 android:id="@+id/rg_star_note"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -97,7 +97,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <android.support.v4.widget.Space
+                    <Space
                         android:layout_width="15dp"
                         android:layout_height="wrap_content" />
 
@@ -111,8 +111,8 @@
                             android:id="@+id/rb_star_note_100"
                             android:layout_width="12dp"
                             android:layout_height="12dp"
-                            android:layout_alignParentRight="true"
                             android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
                             android:layout_margin="5dp"
                             android:background="@drawable/selector_background_radiobutton_star_note_count"
                             android:button="@null"
@@ -140,7 +140,7 @@
                             tools:ignore="HardcodedText" />
                     </RelativeLayout>
 
-                    <android.support.v4.widget.Space
+                    <Space
                         android:layout_width="15dp"
                         android:layout_height="wrap_content" />
 
@@ -154,8 +154,8 @@
                             android:id="@+id/rb_star_note_500"
                             android:layout_width="12dp"
                             android:layout_height="12dp"
-                            android:layout_alignParentRight="true"
                             android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
                             android:layout_margin="5dp"
                             android:background="@drawable/selector_background_radiobutton_star_note_count"
                             android:button="@null"
@@ -182,7 +182,7 @@
                             tools:ignore="HardcodedText" />
                     </RelativeLayout>
 
-                    <android.support.v4.widget.Space
+                    <Space
                         android:layout_width="15dp"
                         android:layout_height="wrap_content" />
 
@@ -196,8 +196,8 @@
                             android:id="@+id/rb_star_note_1000"
                             android:layout_width="12dp"
                             android:layout_height="12dp"
-                            android:layout_alignParentRight="true"
                             android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
                             android:layout_margin="5dp"
                             android:background="@drawable/selector_background_radiobutton_star_note_count"
                             android:button="@null"
@@ -224,7 +224,7 @@
                             tools:ignore="HardcodedText" />
                     </RelativeLayout>
 
-                    <android.support.v4.widget.Space
+                    <Space
                         android:layout_width="15dp"
                         android:layout_height="wrap_content" />
                 </LinearLayout>
@@ -235,7 +235,7 @@
                     android:layout_marginTop="15dp"
                     android:orientation="horizontal">
 
-                    <android.support.v4.widget.Space
+                    <Space
                         android:layout_width="15dp"
                         android:layout_height="wrap_content" />
 
@@ -249,8 +249,8 @@
                             android:id="@+id/rb_star_note_5000"
                             android:layout_width="12dp"
                             android:layout_height="12dp"
-                            android:layout_alignParentRight="true"
                             android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
                             android:layout_margin="5dp"
                             android:background="@drawable/selector_background_radiobutton_star_note_count"
                             android:button="@null"
@@ -277,7 +277,7 @@
                             tools:ignore="HardcodedText" />
                     </RelativeLayout>
 
-                    <android.support.v4.widget.Space
+                    <Space
                         android:layout_width="15dp"
                         android:layout_height="wrap_content" />
 
@@ -291,8 +291,8 @@
                             android:id="@+id/rb_star_note_10000"
                             android:layout_width="12dp"
                             android:layout_height="12dp"
-                            android:layout_alignParentRight="true"
                             android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
                             android:layout_margin="5dp"
                             android:background="@drawable/selector_background_radiobutton_star_note_count"
                             android:button="@null"
@@ -319,7 +319,7 @@
                             tools:ignore="HardcodedText" />
                     </RelativeLayout>
 
-                    <android.support.v4.widget.Space
+                    <Space
                         android:layout_width="15dp"
                         android:layout_height="wrap_content" />
 
@@ -333,8 +333,8 @@
                             android:id="@+id/rb_star_note_at_will"
                             android:layout_width="12dp"
                             android:layout_height="12dp"
-                            android:layout_alignParentRight="true"
                             android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
                             android:layout_margin="5dp"
                             android:background="@drawable/selector_background_radiobutton_star_note_count"
                             android:button="@null"
@@ -384,11 +384,11 @@
                         </LinearLayout>
                     </RelativeLayout>
 
-                    <android.support.v4.widget.Space
+                    <Space
                         android:layout_width="15dp"
                         android:layout_height="wrap_content" />
                 </LinearLayout>
-            </com.wkz.radiogroup.RadioGroup>
+            </com.fphoenixcorneae.radiogroup.NestedRadioGroup>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -400,7 +400,7 @@
                 android:textSize="14sp"
                 tools:ignore="HardcodedText,RtlHardcoded" />
 
-            <com.wkz.radiogroup.RadioGroup
+            <com.fphoenixcorneae.radiogroup.NestedRadioGroup
                 android:id="@+id/rg_recharge"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -435,8 +435,8 @@
                         android:id="@+id/rb_recharge_alipay"
                         android:layout_width="12dp"
                         android:layout_height="12dp"
-                        android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
                         android:layout_margin="5dp"
                         android:background="@drawable/selector_background_radiobutton_star_note_recharge_way"
                         android:button="@null"
@@ -473,8 +473,8 @@
                         android:id="@+id/rb_recharge_wechat"
                         android:layout_width="12dp"
                         android:layout_height="12dp"
-                        android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
                         android:layout_margin="5dp"
                         android:background="@drawable/selector_background_radiobutton_star_note_recharge_way"
                         android:button="@null"
@@ -511,8 +511,8 @@
                         android:id="@+id/rb_recharge_union"
                         android:layout_width="12dp"
                         android:layout_height="12dp"
-                        android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
                         android:layout_margin="5dp"
                         android:background="@drawable/selector_background_radiobutton_star_note_recharge_way"
                         android:button="@null"
@@ -549,23 +549,23 @@
                         android:id="@+id/rb_recharge_qq"
                         android:layout_width="12dp"
                         android:layout_height="12dp"
-                        android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
                         android:layout_margin="5dp"
                         android:background="@drawable/selector_background_radiobutton_star_note_recharge_way"
                         android:button="@null"
                         tools:ignore="RtlHardcoded" />
                 </RelativeLayout>
-            </com.wkz.radiogroup.RadioGroup>
+            </com.fphoenixcorneae.radiogroup.NestedRadioGroup>
 
             <RelativeLayout
                 android:id="@+id/rl_recharge_more"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:layout_marginBottom="15dp"
                 android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
                 android:layout_marginTop="-5dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
                 android:background="@drawable/shape_background_white_cornersfive">
 
                 <ImageView
@@ -591,10 +591,10 @@
                 android:id="@+id/rl_discount"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:layout_marginBottom="58dp"
                 android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
                 android:layout_marginTop="5dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="58dp"
                 android:background="@drawable/shape_background_white_cornersfive">
 
                 <ImageView
@@ -640,7 +640,7 @@
                     tools:ignore="HardcodedText,RtlHardcoded,SmallSp" />
             </RelativeLayout>
         </LinearLayout>
-    </android.support.v4.widget.NestedScrollView>
+    </androidx.core.widget.NestedScrollView>
 
     <TextView
         android:id="@+id/tv_recharge_immediately"
