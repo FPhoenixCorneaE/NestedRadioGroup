@@ -12,7 +12,7 @@ import androidx.annotation.IdRes
 import androidx.constraintlayout.widget.ConstraintLayout
 
 /**
- * @desc 可以实现任意嵌套RadioButton实现单选框的约束布局
+ * @desc 可以任意嵌套RadioButton实现单选框的约束布局
  * @date 2020-08-15 11:09
  */
 class NestedRadioGroup : ConstraintLayout {
