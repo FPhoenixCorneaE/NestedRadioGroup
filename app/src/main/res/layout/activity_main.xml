@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffededed">
 
     <RelativeLayout
-        android:id="@+id/rl_title_bar"
+        android:id="@+id/mRlTitleBar"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:background="@android:color/white"
         android:minHeight="48dp">
 
         <LinearLayout
-            android:id="@+id/ll_left"
+            android:id="@+id/mLlLeft"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center_vertical"
@@ -21,7 +22,7 @@
             android:orientation="horizontal">
 
             <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/iv_left"
+                android:id="@+id/mIvLeft"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
@@ -32,7 +33,7 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/tv_title"
+            android:id="@+id/mTvTitle"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -87,307 +88,292 @@
             </LinearLayout>
 
             <com.fphoenixcorneae.radiogroup.NestedRadioGroup
-                android:id="@+id/rg_star_note"
+                android:id="@+id/mRgStarNote"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_height="wrap_content">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                <RelativeLayout
+                    android:id="@+id/mRlStarNote100"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="15dp"
+                    android:background="@drawable/selector_background_star_note_recharge"
+                    app:layout_constraintBottom_toTopOf="@+id/mRlStarNote5000"
+                    app:layout_constraintEnd_toStartOf="@+id/mRlStarNote500"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed">
 
-                    <Space
-                        android:layout_width="15dp"
-                        android:layout_height="wrap_content" />
+                    <RadioButton
+                        android:id="@+id/mRbStarNote100"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/selector_background_radiobutton_star_note_count"
+                        android:button="@null"
+                        android:checked="true"
+                        tools:ignore="RtlHardcoded" />
 
-                    <RelativeLayout
-                        android:layout_width="0dp"
-                        android:layout_height="80dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/selector_background_star_note_recharge">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="25dp"
+                        android:text="100星币"
+                        android:textColor="@color/selector_normalblack_selectedwhite"
+                        android:textSize="13sp"
+                        tools:ignore="HardcodedText" />
 
-                        <RadioButton
-                            android:id="@+id/rb_star_note_100"
-                            android:layout_width="12dp"
-                            android:layout_height="12dp"
-                            android:layout_alignParentTop="true"
-                            android:layout_alignParentRight="true"
-                            android:layout_margin="5dp"
-                            android:background="@drawable/selector_background_radiobutton_star_note_count"
-                            android:button="@null"
-                            android:checked="true"
-                            tools:ignore="RtlHardcoded" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="45dp"
+                        android:text="￥100"
+                        android:textColor="@color/selector_normalblack_selectedwhite"
+                        android:textSize="12sp"
+                        tools:ignore="HardcodedText" />
+                </RelativeLayout>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginTop="25dp"
-                            android:text="100星币"
-                            android:textColor="@color/selector_normalblack_selectedwhite"
-                            android:textSize="13sp"
-                            tools:ignore="HardcodedText" />
+                <RelativeLayout
+                    android:id="@+id/mRlStarNote500"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="15dp"
+                    android:background="@drawable/selector_background_star_note_recharge"
+                    app:layout_constraintEnd_toStartOf="@+id/mRlStarNote1000"
+                    app:layout_constraintStart_toEndOf="@+id/mRlStarNote100"
+                    app:layout_constraintTop_toTopOf="parent">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginTop="45dp"
-                            android:text="￥100"
-                            android:textColor="@color/selector_normalblack_selectedwhite"
-                            android:textSize="12sp"
-                            tools:ignore="HardcodedText" />
-                    </RelativeLayout>
+                    <RadioButton
+                        android:id="@+id/mRbStarNote500"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/selector_background_radiobutton_star_note_count"
+                        android:button="@null"
+                        tools:ignore="RtlHardcoded" />
 
-                    <Space
-                        android:layout_width="15dp"
-                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="25dp"
+                        android:text="500星币"
+                        android:textColor="@color/selector_normalblack_selectedwhite"
+                        android:textSize="13sp"
+                        tools:ignore="HardcodedText" />
 
-                    <RelativeLayout
-                        android:layout_width="0dp"
-                        android:layout_height="80dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/selector_background_star_note_recharge">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="45dp"
+                        android:text="￥500"
+                        android:textColor="@color/selector_normalblack_selectedwhite"
+                        android:textSize="12sp"
+                        tools:ignore="HardcodedText" />
+                </RelativeLayout>
 
-                        <RadioButton
-                            android:id="@+id/rb_star_note_500"
-                            android:layout_width="12dp"
-                            android:layout_height="12dp"
-                            android:layout_alignParentTop="true"
-                            android:layout_alignParentRight="true"
-                            android:layout_margin="5dp"
-                            android:background="@drawable/selector_background_radiobutton_star_note_count"
-                            android:button="@null"
-                            tools:ignore="RtlHardcoded" />
+                <RelativeLayout
+                    android:id="@+id/mRlStarNote1000"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/selector_background_star_note_recharge"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/mRlStarNote500"
+                    app:layout_constraintTop_toTopOf="parent">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginTop="25dp"
-                            android:text="500星币"
-                            android:textColor="@color/selector_normalblack_selectedwhite"
-                            android:textSize="13sp"
-                            tools:ignore="HardcodedText" />
+                    <RadioButton
+                        android:id="@+id/mRbStarNote1000"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/selector_background_radiobutton_star_note_count"
+                        android:button="@null"
+                        tools:ignore="RtlHardcoded" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginTop="45dp"
-                            android:text="￥500"
-                            android:textColor="@color/selector_normalblack_selectedwhite"
-                            android:textSize="12sp"
-                            tools:ignore="HardcodedText" />
-                    </RelativeLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="25dp"
+                        android:text="1000星币"
+                        android:textColor="@color/selector_normalblack_selectedwhite"
+                        android:textSize="13sp"
+                        tools:ignore="HardcodedText" />
 
-                    <Space
-                        android:layout_width="15dp"
-                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="45dp"
+                        android:text="￥1000"
+                        android:textColor="@color/selector_normalblack_selectedwhite"
+                        android:textSize="12sp"
+                        tools:ignore="HardcodedText" />
+                </RelativeLayout>
 
-                    <RelativeLayout
-                        android:layout_width="0dp"
-                        android:layout_height="80dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/selector_background_star_note_recharge">
-
-                        <RadioButton
-                            android:id="@+id/rb_star_note_1000"
-                            android:layout_width="12dp"
-                            android:layout_height="12dp"
-                            android:layout_alignParentTop="true"
-                            android:layout_alignParentRight="true"
-                            android:layout_margin="5dp"
-                            android:background="@drawable/selector_background_radiobutton_star_note_count"
-                            android:button="@null"
-                            tools:ignore="RtlHardcoded" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginTop="25dp"
-                            android:text="1000星币"
-                            android:textColor="@color/selector_normalblack_selectedwhite"
-                            android:textSize="13sp"
-                            tools:ignore="HardcodedText" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginTop="45dp"
-                            android:text="￥1000"
-                            android:textColor="@color/selector_normalblack_selectedwhite"
-                            android:textSize="12sp"
-                            tools:ignore="HardcodedText" />
-                    </RelativeLayout>
-
-                    <Space
-                        android:layout_width="15dp"
-                        android:layout_height="wrap_content" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                <RelativeLayout
+                    android:id="@+id/mRlStarNote5000"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="15dp"
                     android:layout_marginTop="15dp"
-                    android:orientation="horizontal">
+                    android:background="@drawable/selector_background_star_note_recharge"
+                    app:layout_constraintEnd_toStartOf="@+id/mRlStarNote10000"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mRlStarNote100">
 
-                    <Space
-                        android:layout_width="15dp"
-                        android:layout_height="wrap_content" />
+                    <RadioButton
+                        android:id="@+id/mRbStarNote5000"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/selector_background_radiobutton_star_note_count"
+                        android:button="@null"
+                        tools:ignore="RtlHardcoded" />
 
-                    <RelativeLayout
-                        android:layout_width="0dp"
-                        android:layout_height="80dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/selector_background_star_note_recharge">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="25dp"
+                        android:text="5000星币"
+                        android:textColor="@color/selector_normalblack_selectedwhite"
+                        android:textSize="13sp"
+                        tools:ignore="HardcodedText" />
 
-                        <RadioButton
-                            android:id="@+id/rb_star_note_5000"
-                            android:layout_width="12dp"
-                            android:layout_height="12dp"
-                            android:layout_alignParentTop="true"
-                            android:layout_alignParentRight="true"
-                            android:layout_margin="5dp"
-                            android:background="@drawable/selector_background_radiobutton_star_note_count"
-                            android:button="@null"
-                            tools:ignore="RtlHardcoded" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="45dp"
+                        android:text="￥5000"
+                        android:textColor="@color/selector_normalblack_selectedwhite"
+                        android:textSize="12sp"
+                        tools:ignore="HardcodedText" />
+                </RelativeLayout>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginTop="25dp"
-                            android:text="5000星币"
-                            android:textColor="@color/selector_normalblack_selectedwhite"
-                            android:textSize="13sp"
-                            tools:ignore="HardcodedText" />
+                <RelativeLayout
+                    android:id="@+id/mRlStarNote10000"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="15dp"
+                    android:background="@drawable/selector_background_star_note_recharge"
+                    app:layout_constraintEnd_toStartOf="@+id/mRlStarNoteAtWill"
+                    app:layout_constraintStart_toEndOf="@+id/mRlStarNote5000"
+                    app:layout_constraintTop_toTopOf="@+id/mRlStarNote5000">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginTop="45dp"
-                            android:text="￥5000"
-                            android:textColor="@color/selector_normalblack_selectedwhite"
+                    <RadioButton
+                        android:id="@+id/mRbStarNote10000"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/selector_background_radiobutton_star_note_count"
+                        android:button="@null"
+                        tools:ignore="RtlHardcoded" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="25dp"
+                        android:text="10000星币"
+                        android:textColor="@color/selector_normalblack_selectedwhite"
+                        android:textSize="13sp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="45dp"
+                        android:text="￥10000"
+                        android:textColor="@color/selector_normalblack_selectedwhite"
+                        android:textSize="12sp"
+                        tools:ignore="HardcodedText" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/mRlStarNoteAtWill"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/selector_background_star_note_recharge"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/mRlStarNote10000"
+                    app:layout_constraintTop_toTopOf="@+id/mRlStarNote5000">
+
+                    <RadioButton
+                        android:id="@+id/mRbStarNoteAtWill"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/selector_background_radiobutton_star_note_count"
+                        android:button="@null"
+                        tools:ignore="RtlHardcoded" />
+
+                    <TextView
+                        android:id="@+id/mTvStarNoteAtWill"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="其他金额"
+                        android:textColor="#ff505050"
+                        android:textSize="13sp"
+                        tools:ignore="HardcodedText" />
+
+                    <LinearLayout
+                        android:id="@+id/mLlStarNoteAtWill"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="5dp"
+                        android:gravity="center_vertical|end"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <EditText
+                            android:id="@+id/mEtStarNoteAtWill"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:gravity="end|center_vertical"
+                            android:inputType="numberDecimal"
+                            android:maxLength="32"
+                            android:textColor="@android:color/white"
+                            android:textCursorDrawable="@drawable/shape_cursor_white"
                             android:textSize="12sp"
-                            tools:ignore="HardcodedText" />
-                    </RelativeLayout>
-
-                    <Space
-                        android:layout_width="15dp"
-                        android:layout_height="wrap_content" />
-
-                    <RelativeLayout
-                        android:layout_width="0dp"
-                        android:layout_height="80dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/selector_background_star_note_recharge">
-
-                        <RadioButton
-                            android:id="@+id/rb_star_note_10000"
-                            android:layout_width="12dp"
-                            android:layout_height="12dp"
-                            android:layout_alignParentTop="true"
-                            android:layout_alignParentRight="true"
-                            android:layout_margin="5dp"
-                            android:background="@drawable/selector_background_radiobutton_star_note_count"
-                            android:button="@null"
-                            tools:ignore="RtlHardcoded" />
+                            tools:ignore="Autofill,HardcodedText,LabelFor" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginTop="25dp"
-                            android:text="10000星币"
-                            android:textColor="@color/selector_normalblack_selectedwhite"
+                            android:text="星币"
+                            android:textColor="@android:color/white"
                             android:textSize="13sp"
                             tools:ignore="HardcodedText" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginTop="45dp"
-                            android:text="￥10000"
-                            android:textColor="@color/selector_normalblack_selectedwhite"
-                            android:textSize="12sp"
-                            tools:ignore="HardcodedText" />
-                    </RelativeLayout>
-
-                    <Space
-                        android:layout_width="15dp"
-                        android:layout_height="wrap_content" />
-
-                    <RelativeLayout
-                        android:layout_width="0dp"
-                        android:layout_height="80dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/selector_background_star_note_recharge">
-
-                        <RadioButton
-                            android:id="@+id/rb_star_note_at_will"
-                            android:layout_width="12dp"
-                            android:layout_height="12dp"
-                            android:layout_alignParentTop="true"
-                            android:layout_alignParentRight="true"
-                            android:layout_margin="5dp"
-                            android:background="@drawable/selector_background_radiobutton_star_note_count"
-                            android:button="@null"
-                            tools:ignore="RtlHardcoded" />
-
-                        <TextView
-                            android:id="@+id/tv_star_note_at_will"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:text="其他金额"
-                            android:textColor="#ff505050"
-                            android:textSize="13sp"
-                            tools:ignore="HardcodedText" />
-
-                        <LinearLayout
-                            android:id="@+id/ll_star_note_at_will"
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:layout_centerInParent="true"
-                            android:layout_margin="5dp"
-                            android:gravity="center_vertical|end"
-                            android:orientation="horizontal"
-                            android:visibility="gone">
-
-                            <EditText
-                                android:id="@+id/et_star_note_at_will"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:background="@null"
-                                android:gravity="end|center_vertical"
-                                android:inputType="numberDecimal"
-                                android:maxLength="32"
-                                android:textColor="@android:color/white"
-                                android:textCursorDrawable="@drawable/shape_cursor_white"
-                                android:textSize="12sp"
-                                tools:ignore="HardcodedText" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="星币"
-                                android:textColor="@android:color/white"
-                                android:textSize="13sp"
-                                tools:ignore="HardcodedText" />
-                        </LinearLayout>
-                    </RelativeLayout>
-
-                    <Space
-                        android:layout_width="15dp"
-                        android:layout_height="wrap_content" />
-                </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
             </com.fphoenixcorneae.radiogroup.NestedRadioGroup>
 
             <TextView
@@ -401,17 +387,19 @@
                 tools:ignore="HardcodedText,RtlHardcoded" />
 
             <com.fphoenixcorneae.radiogroup.NestedRadioGroup
-                android:id="@+id/rg_recharge"
+                android:id="@+id/mRgRecharge"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:padding="15dp">
 
                 <RelativeLayout
-                    android:id="@+id/rl_recharge_alipay"
+                    android:id="@+id/mRlRechargeAlipay"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
-                    android:background="@drawable/shape_background_white_cornersfive">
+                    android:background="@drawable/shape_background_white_cornersfive"
+                    app:layout_constraintBottom_toTopOf="@+id/mRlRechargeWechat"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed">
 
                     <ImageView
                         android:layout_width="22dp"
@@ -432,7 +420,7 @@
                         tools:ignore="HardcodedText,RtlHardcoded" />
 
                     <RadioButton
-                        android:id="@+id/rb_recharge_alipay"
+                        android:id="@+id/mRbRechargeAlipay"
                         android:layout_width="12dp"
                         android:layout_height="12dp"
                         android:layout_alignParentTop="true"
@@ -445,11 +433,13 @@
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:id="@+id/rl_recharge_wechat"
+                    android:id="@+id/mRlRechargeWechat"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:layout_marginTop="10dp"
-                    android:background="@drawable/shape_background_white_cornersfive">
+                    android:background="@drawable/shape_background_white_cornersfive"
+                    app:layout_constraintBottom_toTopOf="@+id/mRlRechargeUnion"
+                    app:layout_constraintTop_toBottomOf="@+id/mRlRechargeAlipay">
 
                     <ImageView
                         android:layout_width="22dp"
@@ -470,7 +460,7 @@
                         tools:ignore="HardcodedText,RtlHardcoded" />
 
                     <RadioButton
-                        android:id="@+id/rb_recharge_wechat"
+                        android:id="@+id/mRbRechargeWechat"
                         android:layout_width="12dp"
                         android:layout_height="12dp"
                         android:layout_alignParentTop="true"
@@ -482,12 +472,14 @@
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:id="@+id/rl_recharge_union"
+                    android:id="@+id/mRlRechargeUnion"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:layout_marginTop="10dp"
                     android:background="@drawable/shape_background_white_cornersfive"
-                    android:visibility="gone">
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/mRlRechargeWechat"
+                    tools:visibility="visible">
 
                     <ImageView
                         android:layout_width="22dp"
@@ -508,7 +500,7 @@
                         tools:ignore="HardcodedText,RtlHardcoded" />
 
                     <RadioButton
-                        android:id="@+id/rb_recharge_union"
+                        android:id="@+id/mRbRechargeUnion"
                         android:layout_width="12dp"
                         android:layout_height="12dp"
                         android:layout_alignParentTop="true"
@@ -520,12 +512,15 @@
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:id="@+id/rl_recharge_qq"
+                    android:id="@+id/mRlRechargeQq"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:layout_marginTop="10dp"
                     android:background="@drawable/shape_background_white_cornersfive"
-                    android:visibility="gone">
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mRlRechargeUnion"
+                    tools:visibility="visible">
 
                     <ImageView
                         android:layout_width="22dp"
@@ -546,7 +541,7 @@
                         tools:ignore="HardcodedText,RtlHardcoded" />
 
                     <RadioButton
-                        android:id="@+id/rb_recharge_qq"
+                        android:id="@+id/mRbRechargeQq"
                         android:layout_width="12dp"
                         android:layout_height="12dp"
                         android:layout_alignParentTop="true"
@@ -559,7 +554,7 @@
             </com.fphoenixcorneae.radiogroup.NestedRadioGroup>
 
             <RelativeLayout
-                android:id="@+id/rl_recharge_more"
+                android:id="@+id/mRlRechargeMore"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginLeft="15dp"
@@ -588,7 +583,7 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/rl_discount"
+                android:id="@+id/mRlDiscount"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginLeft="15dp"
@@ -616,7 +611,7 @@
                     tools:ignore="HardcodedText,RtlHardcoded" />
 
                 <ImageView
-                    android:id="@+id/iv_arrow_discount"
+                    android:id="@+id/mIvArrowDiscount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
@@ -626,12 +621,12 @@
                     tools:ignore="ContentDescription,RtlHardcoded" />
 
                 <TextView
-                    android:id="@+id/tv_usable_discount"
+                    android:id="@+id/mTvUsableDiscount"
                     android:layout_width="50dp"
                     android:layout_height="15dp"
                     android:layout_centerVertical="true"
                     android:layout_marginRight="25dp"
-                    android:layout_toLeftOf="@id/iv_arrow_discount"
+                    android:layout_toLeftOf="@id/mIvArrowDiscount"
                     android:background="@drawable/shape_background_red_cornersthree"
                     android:gravity="center"
                     android:text="1个可用"
@@ -643,7 +638,7 @@
     </androidx.core.widget.NestedScrollView>
 
     <TextView
-        android:id="@+id/tv_recharge_immediately"
+        android:id="@+id/mTvRechargeImmediately"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_gravity="bottom"

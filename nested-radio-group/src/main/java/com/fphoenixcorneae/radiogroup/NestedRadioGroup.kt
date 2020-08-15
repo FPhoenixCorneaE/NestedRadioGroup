@@ -1,9 +1,7 @@
 package com.fphoenixcorneae.radiogroup
 
-import android.annotation.TargetApi
 import android.content.Context
 import android.content.res.TypedArray
-import android.os.Build
 import android.util.AttributeSet
 import android.view.View
 import android.view.ViewGroup
@@ -11,11 +9,13 @@ import android.widget.CompoundButton
 import android.widget.LinearLayout
 import android.widget.RadioButton
 import androidx.annotation.IdRes
+import androidx.constraintlayout.widget.ConstraintLayout
 
 /**
- * @desc 可以实现任意嵌套RadioButton
+ * @desc 可以实现任意嵌套RadioButton实现单选框的约束布局
+ * @date 2020-08-15 11:09
  */
-class NestedRadioGroup : LinearLayout {
+class NestedRadioGroup : ConstraintLayout {
     /**
      *
      * Returns the identifier of the selected radio button in this group.
@@ -48,11 +48,6 @@ class NestedRadioGroup : LinearLayout {
     }
 
     constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
-        init()
-    }
-
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int, defStyleRes: Int) : super(context, attrs, defStyleAttr, defStyleRes) {
         init()
     }
 
@@ -192,7 +187,7 @@ class NestedRadioGroup : LinearLayout {
         return p is LayoutParams
     }
 
-    override fun generateDefaultLayoutParams(): LinearLayout.LayoutParams {
+    override fun generateDefaultLayoutParams(): ConstraintLayout.LayoutParams {
         return LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
     }
 
@@ -212,7 +207,7 @@ class NestedRadioGroup : LinearLayout {
      * [Attributes][LinearLayout]
      * for a list of all child view attributes that this class supports.
      */
-    class LayoutParams : LinearLayout.LayoutParams {
+    inner class LayoutParams : ConstraintLayout.LayoutParams {
         /**
          * {@inheritDoc}
          */
@@ -222,11 +217,6 @@ class NestedRadioGroup : LinearLayout {
          * {@inheritDoc}
          */
         constructor(w: Int, h: Int) : super(w, h) {}
-
-        /**
-         * {@inheritDoc}
-         */
-        constructor(w: Int, h: Int, initWeight: Float) : super(w, h, initWeight) {}
 
         /**
          * {@inheritDoc}
