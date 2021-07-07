@@ -26,7 +26,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
-                android:layout_marginLeft="15dp"
                 android:scaleType="centerInside"
                 android:src="@mipmap/ic_back"
                 tools:ignore="contentDescription" />
@@ -392,13 +391,45 @@
                 android:layout_height="wrap_content"
                 android:padding="15dp">
 
+                <RadioButton
+                    android:id="@+id/mRbCustom1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="5dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="RtlHardcoded" />
+
+                <RadioButton
+                    android:id="@+id/mRbCustom2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="5dp"
+                    app:layout_constraintStart_toEndOf="@id/mRbCustom1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="RtlHardcoded" />
+
+                <RadioButton
+                    android:id="@+id/mRbCustom3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="5dp"
+                    app:layout_constraintStart_toEndOf="@id/mRbCustom2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="RtlHardcoded" />
+
                 <RelativeLayout
                     android:id="@+id/mRlRechargeAlipay"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:background="@drawable/shape_background_white_cornersfive"
                     app:layout_constraintBottom_toTopOf="@+id/mRlRechargeWechat"
-                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/mRbCustom1"
                     app:layout_constraintVertical_chainStyle="packed">
 
                     <ImageView

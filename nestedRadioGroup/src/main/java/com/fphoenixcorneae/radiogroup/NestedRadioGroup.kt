@@ -12,10 +12,14 @@ import androidx.annotation.IdRes
 import androidx.constraintlayout.widget.ConstraintLayout
 
 /**
- * @desc 可以任意嵌套RadioButton实现单选框的约束布局
+ * @desc 可以任意嵌套 RadioButton 实现单选框的约束布局
  * @date 2020-08-15 11:09
  */
-class NestedRadioGroup : ConstraintLayout {
+class NestedRadioGroup @JvmOverloads constructor(
+    context: Context,
+    attrs: AttributeSet? = null,
+    defStyleAttr: Int = 0,
+) : ConstraintLayout(context, attrs, defStyleAttr) {
     /**
      *
      * Returns the identifier of the selected radio button in this group.
@@ -39,19 +43,7 @@ class NestedRadioGroup : ConstraintLayout {
     private var mOnCheckedChangeListener: OnCheckedChangeListener? = null
     private var mPassThroughListener: PassThroughHierarchyChangeListener? = null
 
-    constructor(context: Context?) : super(context) {
-        init()
-    }
-
-    constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs) {
-        init()
-    }
-
-    constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
-        init()
-    }
-
-    private fun init() {
+    init {
         mChildOnCheckedChangeListener = CheckedStateTracker()
         mPassThroughListener = PassThroughHierarchyChangeListener()
         super.setOnHierarchyChangeListener(mPassThroughListener)
@@ -327,7 +319,8 @@ class NestedRadioGroup : ConstraintLayout {
                 child.setId(id)
             }
             val parent = child.getParent() as? ViewGroup
-            if (parent != null) {
+            if (parent != null && parent !is NestedRadioGroup) {
+                // 直接父类不是 NestedRadioGroup
                 child.setClickable(false)
                 parent.setOnClickListener(object : OnClickListener {
                     override fun onClick(v: View) {

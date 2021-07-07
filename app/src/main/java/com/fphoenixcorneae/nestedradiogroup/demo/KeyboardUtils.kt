@@ -1,4 +1,4 @@
-package com.fphoenixcorneae.demo
+package com.fphoenixcorneae.nestedradiogroup.demo
 
 import android.app.Activity
 import android.content.Context
